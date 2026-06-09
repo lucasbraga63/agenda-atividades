@@ -1,0 +1,24 @@
+{
+  "name": "agenda-atividades",
+  "version": "1.0.0",
+  "description": "Essa atividade será usada o CRUD para uma agenda de atividades",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasbraga63/agenda-atividades.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lucasbraga63/agenda-atividades/issues"
+  },
+  "homepage": "https://github.com/lucasbraga63/agenda-atividades#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

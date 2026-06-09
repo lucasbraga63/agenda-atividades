@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aliceblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.titulo{
+    background-color: rgb(0, 157, 248);
+    height: 65px;
+    padding: 10px;
+}
+
+.tela-toda{
+background-color: rgb(228, 228, 228);
+width: 60%;
+height: 500px;
+}
+
+.formAtividade{
+    width: 50%;
+}
