@@ -1,31 +1,144 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: aliceblue;
-    min-height: 100vh;
+.titulo {
+    background-color: rgb(130, 167, 238);
     display: flex;
-    flex-direction: column;
+    gap: 20px;
+}
+img{
+   width: 60px;
+   height: auto;
+}
+.imagem {
     justify-content: center;
     align-items: center;
-    font-family:Arial, Helvetica, sans-serif;
-}
-
-.titulo{
-    background-color: rgb(0, 157, 248);
-    height: 65px;
+    display: flex;
     padding: 10px;
 }
 
-.tela-toda{
-background-color: rgb(228, 228, 228);
-width: 60%;
-height: 500px;
+.titulo h2 {
+    font-size: 20px;
+    margin-left: 20px;
 }
 
-.formAtividade{
-    width: 50%;
+.tela-toda {
+    background-color: rgb(248, 249, 253);
+    width: 80%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tela-interacao {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+}
+
+#formAtividade {
+    width: 40%;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(254, 254, 254);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.473);
+}
+
+h3 {
+    font-size: 18px;
+    color: rgb(50, 108, 215);
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input input {
+    height: 30px;
+    border: solid 2px rgb(203, 203, 203);
+    border-radius: 7px;
+    font-size: 12px;
+    padding-left: 10px;
+    outline: none;
+    color:  rgb(116, 116, 116);
+}
+
+.input label {
+    font-size: 13px;
+    color: rgb(53, 55, 59);
+    font-weight: 600;
+}
+
+.input textarea {
+    height: 60px;
+    border: solid 2px rgb(203, 203, 203);
+    border-radius: 7px;
+    font-size: 12px;
+    padding-left: 10px;
+    outline: none;
+    color: rgb(116, 116, 116);
+}
+
+.input-duplo {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+
+.lista-atividades {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-duplo select{
+    height: 30px;
+    border: solid 2px rgb(203, 203, 203);
+    border-radius: 7px;
+    font-size: 12px;
+    padding-left: 10px;
+    outline: none;
+    color: rgb(116, 116, 116);
+}
+
+.input-duplo label{
+    font-size: 13px;
+    color: rgb(53, 55, 59);
+    font-weight: 600;
+}
+
+.botoes{
+    display: flex;
+    gap: 15px;
+}
+
+.botoes button{
+    height: 30px;
+    border: solid 2px rgb(203, 203, 203);
+    border-radius: 7px;
+    font-size: 12px;
+    padding: 0 15px;
+    background-color:rgb(43, 103, 215);
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+#btnLimpar{
+    background-color:rgb(246, 245, 249);
+    color: rgb(79, 86, 96);
+    border: solid 2px rgb(203, 203, 203);
 }

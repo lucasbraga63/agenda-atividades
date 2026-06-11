@@ -10,39 +10,88 @@
 </head>
 
 <body>
+
     <div class="tela-toda">
-        <form id="formAtividade">
-            <input type="hidden" id="id">
-            <label for="titulo">Título da atividade</label>
-            <input type="text" id="titulo" placeholder="Digite o título da atividade">
-            <label for="descricao">Descrição</label>
-            <textarea id="descricao" placeholder="Descreva a atividade"></textarea>
-            <label for="data">Data</label>
-            <input type="date" id="data">
-            <label for="horario">Horário</label>
-            <input type="time" id="horario">
-            <label for="prioridade">Prioridade</label>
-            <select id="prioridade">
-                <option value="">Selecione</option>
-                <option value="Baixa">Baixa</option>
-                <option value="Média">Média</option>
-                <option value="Alta">Alta</option>
-            </select>
-            <label for="status">Status</label>
-            <select id="status">
-                <option value="">Selecione</option>
-                <option value="Pendente">Pendente</option>
-                <option value="Em andamento">Em andamento</option>
-                <option value="Concluída">Concluída</option>
-            </select>
-            <button type="submit">Salvar</button>
-            <button type="button" id="btnLimpar">Limpar</button>
-        </form>
-        <section>
-            <h2>Atividades cadastradas</h2>
-            <div id="listaAtividades"></div>
-        </section>
+
+        <header class="titulo">
+            <div class="imagem">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="texto">
+                <h2>Agendamento de Atividades</h2>
+            </div>
+        </header>
+
+        <div class="tela-interacao">
+
+            <form id="formAtividade">
+
+                <input type="hidden" id="id">
+                <h3>Cadastrar nova atividade</h3>
+                <div class="inputs">
+
+                    <div class="input">
+                        <label for="titulo">Título da atividade</label>
+                        <input type="text" id="titulo" placeholder="Digite o título da atividade">
+                    </div>
+
+                    <div class="input">
+                        <label for="descricao">Descrição</label>
+                        <textarea id="descricao" placeholder="Descreva a atividade"></textarea>
+                    </div>
+
+                    <div class="input-duplo">
+                        <div class="input">
+                            <label for="data">Data</label>
+                            <input type="date" id="data">
+                        </div>
+                        <div class="input">
+                            <label for="horario">Horário</label>
+                            <input type="time" id="horario">
+                        </div>
+                    </div>
+
+                    <div class="input-duplo">
+                        <div class="input">
+                            <label for="prioridade">Prioridade</label>
+                            <select id="prioridade">
+                                <option value="">Selecione</option>
+                                <option value="Baixa">Baixa</option>
+                                <option value="Média">Média</option>
+                                <option value="Alta">Alta</option>
+                            </select>
+                        </div>
+
+                        <div class="input">
+                            <label for="status">Status</label>
+                            <select id="status">
+                                <option value="">Selecione</option>
+                                <option value="Pendente">Pendente</option>
+                                <option value="Em andamento">Em andamento</option>
+                                <option value="Concluída">Concluída</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="botoes">
+                    <button type="submit">Salvar</button>
+                    <button type="button" id="btnLimpar">Limpar</button>
+                </div>
+
+            </form>
+
+
+
+            <section class="lista-atividades">
+                <h2>Atividades cadastradas</h2>
+                <div id="listaAtividades"></div>
+            </section>
+        </div>
+
     </div>
+
 </body>
 
 </html>
