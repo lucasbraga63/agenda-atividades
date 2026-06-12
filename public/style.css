@@ -1,6 +1,10 @@
 body {
     background-color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
 }
 
 .titulo {
@@ -8,10 +12,12 @@ body {
     display: flex;
     gap: 20px;
 }
-img{
-   width: 60px;
-   height: auto;
+
+img {
+    width: 60px;
+    height: auto;
 }
+
 .imagem {
     justify-content: center;
     align-items: center;
@@ -36,6 +42,8 @@ img{
     display: flex;
     gap: 40px;
     padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 #formAtividade {
@@ -74,7 +82,7 @@ h3 {
     font-size: 12px;
     padding-left: 10px;
     outline: none;
-    color:  rgb(116, 116, 116);
+    color: rgb(116, 116, 116);
 }
 
 .input label {
@@ -105,7 +113,7 @@ h3 {
     flex-direction: column;
 }
 
-.input-duplo select{
+.input-duplo select {
     height: 30px;
     border: solid 2px rgb(203, 203, 203);
     border-radius: 7px;
@@ -115,30 +123,117 @@ h3 {
     color: rgb(116, 116, 116);
 }
 
-.input-duplo label{
+.input-duplo label {
     font-size: 13px;
     color: rgb(53, 55, 59);
     font-weight: 600;
 }
 
-.botoes{
+.botoes {
     display: flex;
     gap: 15px;
 }
 
-.botoes button{
+.botoes button {
     height: 30px;
     border: solid 2px rgb(203, 203, 203);
     border-radius: 7px;
     font-size: 12px;
     padding: 0 15px;
-    background-color:rgb(43, 103, 215);
+    background-color: rgb(43, 103, 215);
     border: none;
     color: white;
     font-weight: 600;
 }
-#btnLimpar{
-    background-color:rgb(246, 245, 249);
+
+#btnLimpar {
+    background-color: rgb(246, 245, 249);
     color: rgb(79, 86, 96);
     border: solid 2px rgb(203, 203, 203);
+}
+
+.lista-atividades {
+    width: 40%;
+    max-height: 410px; 
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgb(254, 254, 254);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.473);
+}
+
+.lista-atividades h2 {
+    font-size: 18px;
+    color: rgb(50, 108, 215);
+}
+
+#listaAtividades{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.card {
+    justify-content: center;
+    display: flex;
+    padding: 7px;
+    flex-direction: column;
+    border: solid 1px rgba(116, 116, 116, 0.295);
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.301);
+}
+
+.card-dados {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-dados .card-titulo h3 {
+    font-size: 15px;
+    color: rgb(53, 55, 59)
+}
+
+.card-descricao {
+    font-size: 13.4px;
+    color: rgb(116, 116, 116);
+    font-weight: 500;
+}
+
+.campo-linha {
+    display: flex;
+    gap: 10px;
+    color: rgb(116, 116, 116);
+    font-weight: 500;
+    font-size: 12.5px;
+}
+
+.campo-coluna{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    font-size: 12px;
+}
+.card-botoes{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+.card-botoes button{
+    border-radius: 5px;
+    width: 20%;
+    height: 30px;
+    border: solid 2px rgb(32, 101, 230);
+    color: rgb(23, 84, 197);
+    font-weight: 500;
+    transition: 0.3s;
+}
+.card-botoes #excluir{
+    border: solid 2px rgb(218, 29, 29);
+    color: rgb(197, 23, 23);
+}
+.card-botoes button:hover{
+    background-color: rgb(223, 221, 221);
 }

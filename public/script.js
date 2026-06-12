@@ -13,21 +13,66 @@ async function carregarAtividades() {
     const atividades = await resposta.json();
 
     listaAtividades.innerHTML = "";
+
     atividades.forEach((atividade) => {
+
+        let corPrioridade = "";
+        let corfundo = "";
+
+
+        if (atividade.prioridade == "Baixa") {
+            corPrioridade = "rgb(15, 146, 15)"
+        } else if (atividade.prioridade == "Média") {
+            corPrioridade = "rgb(255, 179, 0)"
+        } else if (atividade.prioridade == "Alta") {
+            corPrioridade = "rgb(201, 26, 26)"
+        }
+
+        if (atividade.status == "Concluída") {
+            corfundo = "rgb(15, 146, 15, 0.25)"
+        } else if (atividade.status == "Pendente") {
+            corfundo = "rgba(255, 179, 0, 0.25)"
+        } else if (atividade.status == "Em Andamento") {
+            corfundo = "rgba(139, 161, 188, 0.45)"
+            corPrioridade = "rgb(14, 91, 185)"
+        }
+
         const card = document.createElement("div");
+        card.className = "card";
         card.innerHTML = `
-<h3>${atividade.titulo}</h3>
-<p>${atividade.descricao}</p>
-<p><strong>Data:</strong> ${atividade.data}</p>
-<p><strong>Horário:</strong> ${atividade.horario}</p>
-<p><strong>Prioridade:</strong> ${atividade.prioridade}</p>
-<p><strong>Status:</strong> ${atividade.status}</p>
-<button onclick="editarAtividade(${atividade.id})">Editar</button>
-<button onclick="excluirAtividade(${atividade.id})">Excluir</button>
-`;
+            <div class="informacoes">
+                <div class="card-dados">
+                    <div class="card-titulo">
+                        <h3>${atividade.titulo}</h3>
+                    </div>
+                    <div class="card-descricao">
+                        <p>${atividade.descricao}</p>
+                    </div>
+                </div>
+                <div class="campo-linha">
+                    <p><strong>Data:</strong> ${atividade.data}</p>
+                    <p><strong>Horário:</strong> ${atividade.horario}</p>
+                </div>
+                <div class="campo-coluna">
+                    <p style="color: ${corPrioridade}; font-weight: bold;">
+                        <strong>Prioridade:</strong> ${atividade.prioridade}
+                    </p>
+                    <p style="color: ${corPrioridade}; font-weight: bold; background-color: ${corfundo}; border-radius: 7px; padding: 2px 8px;">
+                        <strong>Status:</strong> ${atividade.status}
+                    </p>
+                </div>
+            </div>
+
+            <div class="card-botoes">
+                <button onclick="editarAtividade(${atividade.id})">Editar</button>
+                <button id="excluir" onclick="excluirAtividade(${atividade.id})">Excluir</button>
+            </div>
+        `;
+
         listaAtividades.appendChild(card);
     });
 }
+
 formAtividade.addEventListener("submit", async (event) => {
     event.preventDefault();
     const atividade = {
